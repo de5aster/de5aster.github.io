@@ -6,24 +6,10 @@
 	</head>
 	<body>
 		<h1>МОБ виджет тест</h1>
-		<script>
+		<script type="text/javascript">
 			function onShow() {
-				widget.style.display = "";			
-			}
-		</script>
-		<script>
-			function onClose() {
-				widget.style.display = "none";
-			}
-		</script>
-		<div>
-			<input value="Open" type="button" onclick=onShow()>
-			<input value="Close" type="button" onclick=onClose()>
-		</div>
-		<div id="widget" style="display: none">
-			<p>Hello</p>
-			<script type="text/javascript">
-			    (function(k,o,t,e,l){
+				widget.style.display = "";
+				(function onWidget(k,o,t,e,l){
 			        l = document.createElement("script");
 			        l.type = "text/javascript";
 			        l.src = "https://bookonline24.ru/widget.js";
@@ -43,8 +29,24 @@
 			                container: "widget",
 			            }
 			        }, "https://bookonline24.ru/");
-			    });
-			</script>
+			    });			
+			}
+		</script>
+		<script type="text/javascript">
+			function onClose() {
+				widget.style.display = "none";
+			}
+		</script>
+		<script type="text/javascript">
+			    
+		</script>
+		<div>
+			<input value="Open" type="button" onclick=onShow()>
+			<input value="Close" type="button" onclick=onClose()>
+		</div>
+		<div id="widget" style="display: none">
+			<p>Hello</p>
+			
 		</div>
 	</body>
 </html>
