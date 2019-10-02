@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html>	
 	<head>
 	    <title>Test</title>
 	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -8,6 +8,7 @@
 		<h1>МОБ виджет тест</h1>
 		<script type="text/javascript">
 			function onShow() {
+				clear('widget');
 				widget.style.display = "";
 				(function onWidget(k,o,t,e,l){
 			        l = document.createElement("script");
@@ -29,16 +30,25 @@
 			                container: "widget",
 			            }
 			        }, "https://bookonline24.ru/");
-			    });			
-			}
+			    }); 		
+			}				
 		</script>
 		<script type="text/javascript">
 			function onClose() {
+				clear(widget);
 				widget.style.display = "none";
 			}
 		</script>
+		<script>
+			function clear(elementID) {
+				var node = document.getElementById(elementID);
+				while (node.hasChildNodes()) {
+				    node.removeChild(node.firstChild);
+				}				
+			}
+		</script>
 		<script type="text/javascript">
-			    
+			
 		</script>
 		<div>
 			<input value="Open" type="button" onclick=onShow()>
