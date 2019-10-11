@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>	
 	<head>
 	    <title>Test</title>
@@ -51,7 +51,10 @@
 			            form: {
 			                // Замените ID элемента для виджета здесь
 			                container: "widget",
-			            }
+			            },
+				    hooks: {
+				    	onBooking:  function(booking) { console.log("add booking" + booking); },
+   				    }
 			        }, "https://bookonline24.ru/");
 			    });			
 		</script>
