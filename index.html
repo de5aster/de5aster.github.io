@@ -3,6 +3,7 @@
 	<head>
 	    <title>Test</title>
 	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<style>
 		   #widget {
 		    overflow: hidden;
@@ -25,10 +26,40 @@
 				widget.style.height = '1px';
 				widget.style.visibility = 'hidden';
 			}
-		</script>		
+		</script>
+		<script type="text/javascript">
+			function onGetHotels(){
+				var urls = [];
+				var file = ''
+				fetch('https://roomtoday.ru/sitemap.xml')
+				.then((res) => {
+					if (res.status === 200) {
+						console.log("ok state");
+						return res.text();
+					}
+				}).then((data) => {
+					file = data;
+					if(file!==null)
+					{
+						console.log('file is not null')
+						$(file).find('loc').each(function() {
+							$('<li>' ,{
+								append: $('<a>', { 
+									href: $(this).text(),
+									text: $(this).text()
+								})
+							})
+							
+							.appendTo('#refs ol');
+						});
+					}
+				});
+			}
+		</script>
 		<div>
 			<input value="Open" type="button" onclick=onShow()>
 			<input value="Close" type="button" onclick=onClose()>
+			<input value="Get" type="button" onclick=onGetHotels()>
 		</div>		
 		<div id="widget">
 			<p>Hello</p>
@@ -55,6 +86,9 @@
 					}, "https://bookonline24.ru/");
 				});
 			</script>
+		</div><div id="refs">
+			<ol>
+			</ol>
 		</div>
 	</body>
 </html>
