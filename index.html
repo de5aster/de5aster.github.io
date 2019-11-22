@@ -29,35 +29,32 @@
 		<div>
 			<input value="Open" type="button" onclick=onShow()>
 			<input value="Close" type="button" onclick=onClose()>
-		</div>
+		</div>		
 		<div id="widget">
 			<p>Hello</p>
 			<script type="text/javascript">
-			(function onWidget(k,o,t,e,l){
-			        l = document.createElement("script");
-			        l.type = "text/javascript";
-			        l.src = "https://bookonline24.ru/widget.js";
-			        l.async = !0;
-			        l.onload = l.onreadystatechange = function() {
-			            e = this.readyState;
-			            !o && (!e || e === "complete") && (o = 1) && k();
-			        };
-			        t = document.getElementsByTagName("script")[0];
-			        t.parentNode.insertBefore(l, t);
-			    })(function(){
-			        HotelWidget.init({
-			            id: "cb949384-c37e-4aa0-9061-622f5b76e3fb",
-			            type: "verticalBlock",
-			            form: {
-			                // Замените ID элемента для виджета здесь
-			                container: "widget",
-			            },
-				    hooks: {
-				    	onBooking:  function(booking) { console.log("add booking" + booking); },
-   				    }
-			        }, "https://bookonline24.ru/");
-			    });			
-		</script>
+				(function(k,o,t,e,l){
+					l = document.createElement("script");
+					l.type = "text/javascript";
+					l.src = "https://bookonline24.ru/widget.js";
+					l.async = !0;
+					l.onload = l.onreadystatechange = function() {
+						e = this.readyState;
+						!o && (!e || e === "complete") && (o = 1) && k();
+					};
+					t = document.getElementsByTagName("script")[0];
+					t.parentNode.insertBefore(l, t);
+				})(function(){
+					HotelWidget.init({
+						id: "1e1042ec-52f0-4752-b7bb-da056d444176",
+						type: "verticalBlock",
+						form: {
+							// Замените ID элемента для виджета здесь
+							container: "widget",
+						}
+					}, "https://bookonline24.ru/");
+				});
+			</script>
 		</div>
 	</body>
 </html>
