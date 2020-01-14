@@ -92,7 +92,7 @@
 			<ol>
 			</ol>
 		</div>
-		<div id="rooms">
+		<div id="rooms_book">
 		<p>Rooms div</p>
 			<script type="text/javascript">
 				(function(k,o,t,e,l){
@@ -112,16 +112,18 @@
 						type: "horizontalBlock",
 						form: {
 							// Замените ID элемента для виджета здесь
-							container: "rooms",
-							roomList: {
+							container: "rooms"
+						},
+						roomList: {
 								// Замените ID элемента для виджета здесь
-								container: "rooms",
+								container: "rooms-list",
 								insert: "after"
-							}
 						}
 					}, "https://bookonline24.ru/");
 				});
 			</script>
+		</div>
+		<div id="rooms-list">
 		</div>
 	</body>
 </html>
