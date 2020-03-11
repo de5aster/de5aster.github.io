@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>	
 	<head>
 	    <title>Test</title>
@@ -43,6 +43,8 @@
 					{
 						console.log('file is not null')
 						$(file).find('loc').each(function() {
+						if($(this).text().match(/[\/]/g).length>5)
+						{
 							$('<li>' ,{
 								append: $('<a>', { 
 									href: $(this).text(),
@@ -50,8 +52,9 @@
 									target: '_blank'
 								})
 							})
-							
 							.appendTo('#refs ol');
+						}
+
 						});
 					}
 				});
