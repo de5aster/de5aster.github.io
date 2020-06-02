@@ -43,8 +43,6 @@
 					{
 						console.log('file is not null')
 						$(file).find('loc').each(function() {
-						if($(this).text().match(/[\/]/g).length>5)
-						{
 							$('<li>' ,{
 								append: $('<a>', { 
 									href: $(this).text(),
@@ -52,9 +50,8 @@
 									target: '_blank'
 								})
 							})
+							
 							.appendTo('#refs ol');
-						}
-
 						});
 					}
 				});
@@ -94,6 +91,32 @@
 		<div id="refs">
 			<ol>
 			</ol>
+		</div>
+		<div id="widget1">
+			<p>Hello</p>
+			<script type="text/javascript">
+				(function(k,o,t,e,l){
+					l = document.createElement("script");
+					l.type = "text/javascript";
+					l.src = "https://bookonline24.ru/widget.js";
+					l.async = !0;
+					l.onload = l.onreadystatechange = function() {
+						e = this.readyState;
+						!o && (!e || e === "complete") && (o = 1) && k();
+					};
+					t = document.getElementsByTagName("script")[0];
+					t.parentNode.insertBefore(l, t);
+				})(function(){
+					HotelWidget.init({
+						id: "cb949384-c37e-4aa0-9061-622f5b76e3fb",
+						type: "horizontalBlock",
+						form: {
+							// Замените ID элемента для виджета здесь
+							container: "widget1",
+						}
+					}, "https://bookonline24.ru/");
+				});
+			</script>
 		</div>
 		<div id="rooms_book">
 		<p>Rooms div</p>
