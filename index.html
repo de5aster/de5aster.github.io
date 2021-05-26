@@ -14,6 +14,33 @@
 			visibility: hidden;
 		   } 
   		</style>
+		<script type="text/javascript">
+			(function(k,o,t,e,l){
+				l = document.createElement("script");
+				l.type = "text/javascript";
+				l.src = "https://bookonline24.ru/widget.js";
+				l.async = !0;
+				l.onload = l.onreadystatechange = function() {
+					e = this.readyState;
+					!o && (!e || e === "complete") && (o = 1) && k();
+				};
+				t = document.getElementsByTagName("script")[0];
+				t.parentNode.insertBefore(l, t);
+			})(function(){
+				HotelWidget.init({
+					id: "cb949384-c37e-4aa0-9061-622f5b76e3fb",
+					type: "verticalBlock",
+					form: {
+						// Замените ID элемента для виджета здесь
+						container: "rooms_book"
+					},
+					roomsList: {
+						container: "rooms-list",
+						insert: "after"
+					}
+				}, "https://bookonline24.ru/");
+			});
+		</script>
 	</head>
 	<body>
 		<h1>МОБ виджет тест</h1>
@@ -128,32 +155,6 @@
 		</div>
 		<div id="rooms-list">
 		</div>
-		<script type="text/javascript">
-			(function(k,o,t,e,l){
-				l = document.createElement("script");
-				l.type = "text/javascript";
-				l.src = "https://bookonline24.ru/widget.js";
-				l.async = !0;
-				l.onload = l.onreadystatechange = function() {
-					e = this.readyState;
-					!o && (!e || e === "complete") && (o = 1) && k();
-				};
-				t = document.getElementsByTagName("script")[0];
-				t.parentNode.insertBefore(l, t);
-			})(function(){
-				HotelWidget.init({
-					id: "cb949384-c37e-4aa0-9061-622f5b76e3fb",
-					type: "verticalBlock",
-					form: {
-						// Замените ID элемента для виджета здесь
-						container: "rooms_book"
-					},
-					roomsList: {
-						container: "rooms-list",
-						insert: "after"
-					}
-				}, "https://bookonline24.ru/");
-			});
-		</script>
+		
 	</body>
 </html>
