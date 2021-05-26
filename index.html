@@ -15,6 +15,29 @@
 		   } 
   		</style>
 		<script >
+		    (function(k,o,t,e,l){
+			l = document.createElement("script");
+			l.type = "text/javascript";
+			l.src = "https://bookonline24.ru/widget.js";
+			l.async = !0;
+			l.onload = l.onreadystatechange = function() {
+			    e = this.readyState;
+			    !o && (!e || e === "complete") && (o = 1) && k();
+			};
+			t = document.getElementsByTagName("script")[0];
+			t.parentNode.insertBefore(l, t);
+		    })(function(){
+			HotelWidget.init({
+			    id: "cb949384-c37e-4aa0-9061-622f5b76e3fb",
+			    type: "horizontalBlock",
+			    form: {
+				// Замените ID элемента для виджета здесь
+				container: "widget2",
+			    }
+			}, "https://bookonline24.ru/");
+		    });
+		</script>
+		<script >
 			(function(k,o,t,e,l){
 				l = document.createElement("script");
 				l.type = "text/javascript";
@@ -154,6 +177,9 @@
 		<p>Rooms div</p>
 		</div>
 		<div id="rooms-list">
+		</div>
+		<p>New Widget2</p>
+		<div id="widget2">
 		</div>
 		
 	</body>
