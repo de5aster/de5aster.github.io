@@ -82,117 +82,12 @@
 	</head>
 	<body>
 		<h1>МОБ виджет тест</h1>
-		<script type="text/javascript">
-			function onShow() {
-				widget.style.height = 'auto';
-				widget.style.visibility= 'visible';
-			}	
-		</script>
-		<script type="text/javascript">
-			function onClose() {
-				widget.style.overflow = 'hidden';
-				widget.style.height = '1px';
-				widget.style.visibility = 'hidden';
-			}
-		</script>
-		<script type="text/javascript">
-			function onGetHotels(){
-				var urls = [];
-				var file = ''
-				fetch('https://roomtoday.ru/sitemap.xml')
-				.then((res) => {
-					if (res.status === 200) {
-						console.log("ok state");
-						return res.text();
-					}
-				}).then((data) => {
-					file = data;
-					if(file!==null)
-					{
-						console.log('file is not null')
-						$(file).find('loc').each(function() {
-							$('<li>' ,{
-								append: $('<a>', { 
-									href: $(this).text(),
-									text: $(this).text(),
-									target: '_blank'
-								})
-							})
-							
-							.appendTo('#refs ol');
-						});
-					}
-				});
-			}
-		</script>
-		<div>
-			<input value="Open" type="button" onclick=onShow()>
-			<input value="Close" type="button" onclick=onClose()>
-			<input value="Get" type="button" onclick=onGetHotels()>
-		</div>
-		<div id="widget">
-			<p>Hello</p>
-<!--			<script type="text/javascript">
-				(function(k,o,t,e,l){
-					l = document.createElement("script");
-					l.type = "text/javascript";
-					l.src = "https://bookonline24.ru/widget.js";
-					l.async = !0;
-					l.onload = l.onreadystatechange = function() {
-						e = this.readyState;
-						!o && (!e || e === "complete") && (o = 1) && k();
-					};
-					t = document.getElementsByTagName("script")[0];
-					t.parentNode.insertBefore(l, t);
-				})(function(){
-					HotelWidget.init({
-						id: "cb949384-c37e-4aa0-9061-622f5b76e3fb",
-						type: "horizontalBlock",
-						form: {
-							// Замените ID элемента для виджета здесь
-							container: "widget",
-						}
-					}, "https://bookonline24.ru/");
-				});
-			</script>-->
-		</div>
-		<div id="refs">
-			<ol>
-			</ol>
-		</div>
-		<div id="widget1">
-			<p>Hello</p>
-			<!-- htmlmin:ignore -->
-			<script type="text/javascript">
-				(function(k,o,t,e,l){
-					l = document.createElement("script");
-					l.type = "text/javascript";
-					l.src = "https://bookonline24.ru/widget.js";
-					l.async = !0;
-					l.onload = l.onreadystatechange = function() {
-						e = this.readyState;
-						!o && (!e || e === "complete") && (o = 1) && k();
-					};
-					t = document.getElementsByTagName("script")[0];
-					t.parentNode.insertBefore(l, t);
-				})(function(){
-					HotelWidget.init({
-						id: "cb949384-c37e-4aa0-9061-622f5b76e3fb",
-						type: "horizontalBlock",
-						form: {
-							// Замените ID элемента для виджета здесь
-							container: "widget1",
-						}
-					}, "https://bookonline24.ru/");
-				});
-			</script>
-			<!-- htmlmin:ignore -->
 		</div>
 		<div id="rooms_book">
-		<p>Rooms div</p>
+			<p>Отель Антон123/p>
 		</div>
 		<div id="rooms-list">			
-		    <p>Номера</p>
+		    <p>Номера Отель Антон123</p>
 		</div>
 		<div id="baltika">			
 	    	    <p>Балтика</p>
