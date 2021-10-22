@@ -4,3 +4,9 @@
 .WidgetBookingControlButtonContainer > span > [type="button"]:hover {
 	background: rgb(72 208 207);
 }	
+.WidgetCardPriceButtonContainer > span > [type="button"]{
+	background: rgb(34, 153, 152);
+}
+.WidgetCardPriceButtonContainer > span > [type="button"]:hover {
+	background: rgb(72 208 207);
+}	
