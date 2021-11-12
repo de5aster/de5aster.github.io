@@ -8,7 +8,9 @@
 		<script src="/js/1.js"></script>
 		<link rel="stylesheet" href="css/index.css" type="text/css" />
 		<script>
-						
+			function booking(BookingEvent) {
+				console.log(BookingEvent.id);
+			}
 		</script>
 		<script type="text/javascript">
 		    (function(k,o,t,e,l){
@@ -31,7 +33,7 @@
 				container: "rooms_book",
 			    },
 			    hooks:{
-				onBooking: onBooking = (BookingEvent) => console.log(BookingEvent.id)
+				onBooking: onBooking = (BookingEvent) => booking(BookingEvent)
 			    }
 			}, "https://bookonline24.ru/");
 		    });
