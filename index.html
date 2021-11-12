@@ -72,9 +72,17 @@
 			    roomsList: {
 				container: "rooms-list-baltika",
 				insert: "after"
+			    },
+			    hooks:{
+			    	onInit: init();
 			    }
 			}, "https://bookonline24.ru/");
 		    });
+		</script>
+		<script>
+			function init() {
+				console.log("widget Init");
+			}
 		</script>
 	</head>
 	<body>
