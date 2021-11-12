@@ -31,7 +31,7 @@
 				container: "rooms_book",
 			    },
 			    hooks:{
-				onBooking: onBooking = (event: BookingEvent) => console.log(BookingEvent.id);
+				onBooking: onBooking = (BookingEvent) => console.log(BookingEvent.id);
 			    }
 			}, "https://bookonline24.ru/");
 		    });
