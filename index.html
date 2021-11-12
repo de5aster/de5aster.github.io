@@ -74,7 +74,8 @@
 				insert: "after"
 			    },
 			    hooks:{
-			    	onInit: init()
+			    	onInit: init(),
+				onBooking: booking(event)
 			    }
 			}, "https://bookonline24.ru/");
 		    });
@@ -82,6 +83,10 @@
 		<script>
 			function init() {
 				console.log("widget Init");
+			}
+			function booking(e) {
+				console.log("bookig id" + e.id);
+				console.log(e);
 			}
 		</script>
 	</head>
