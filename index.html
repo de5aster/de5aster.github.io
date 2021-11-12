@@ -22,32 +22,32 @@
 			 display:none;
 		  }		
   		</style>
-		<script >
-			(function(k,o,t,e,l){
-				l = document.createElement("script");
-				l.type = "text/javascript";
-				l.src = "https://bookonline24.ru/widget.js";
-				l.async = !0;
-				l.onload = l.onreadystatechange = function() {
-					e = this.readyState;
-					!o && (!e || e === "complete") && (o = 1) && k();
-				};
-				t = document.getElementsByTagName("script")[0];
-				t.parentNode.insertBefore(l, t);
-			})(function(){
-				HotelWidget.init({
-					id: "cb949384-c37e-4aa0-9061-622f5b76e3fb",
-					type: "verticalBlock",
-					form: {
-						// Замените ID элемента для виджета здесь
-						container: "rooms_book"
-					},
-					roomsList: {
-						container: "rooms-list",
-						insert: "after"
-					}
-				}, "https://bookonline24.ru/");
-			});
+		<script type="text/javascript">
+		    (function(k,o,t,e,l){
+			l = document.createElement("script");
+			l.type = "text/javascript";
+			l.src = "https://bookonline24.ru/widget.js";
+			l.async = !0;
+			l.onload = l.onreadystatechange = function() {
+			    e = this.readyState;
+			    !o && (!e || e === "complete") && (o = 1) && k();
+			};
+			t = document.getElementsByTagName("script")[0];
+			t.parentNode.insertBefore(l, t);
+		    })(function(){
+			HotelWidget.init({
+			    id: "cb949384-c37e-4aa0-9061-622f5b76e3fb",
+			    type: "horizontalBlock",
+			    form: {
+				// Замените ID элемента для виджета здесь
+				container: "rooms_book",
+			    },
+			    hooks:{
+			    	onInit: init(),
+				onBooking: booking(event)
+			    }
+			}, "https://bookonline24.ru/");
+		    });
 		</script>
 		<script type="text/javascript">
 		    (function(k,o,t,e,l){
@@ -72,11 +72,7 @@
 			    roomsList: {
 				container: "rooms-list-baltika",
 				insert: "after"
-			    },
-			    hooks:{
-			    	onInit: init(),
-				onBooking: booking(event)
-			    }
+			    }		    
 			}, "https://bookonline24.ru/");
 		    });
 		</script>
@@ -85,7 +81,7 @@
 				console.log("widget Init");
 			}
 			function booking(e) {
-				console.log("bookig id" + e.id);
+				console.log("booking id " + e.id);
 				console.log(e);
 			}
 		</script>
