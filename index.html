@@ -10,6 +10,20 @@
 		<script>
 			function booking(BookingEvent) {
 				console.log(BookingEvent.id);
+				fbq('track', 'Purchase',
+				  // begin parameter object data
+				  {
+				    value: BookingEvent.price,
+				    currency: 'Rub',
+				    contents: [
+				      {
+					id: 'BookingEvent.id',
+					quantity: 1
+				      },
+				    content_type: 'product'
+				  }
+				  // end parameter object data
+				);
 			}
 		</script>
 		<script type="text/javascript">
