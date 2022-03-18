@@ -105,6 +105,13 @@
 		<!-- End Facebook Pixel Code -->
 	</head>
 	<body>
+		<script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
+		<script>
+		  // Sends event to client
+		  vkBridge.send('VKWebAppInit');
+		</script>
+
+
 		<h1>МОБ виджет тест</h1>
 		</div>
 		<div id="rooms_book">
