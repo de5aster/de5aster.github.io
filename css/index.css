@@ -16,3 +16,7 @@
 .WidgetBookingFormButtonContainer > span > [type="button"]:hover {
 	background: rgb(72 208 207);
 }
+
+.BookingControl_control {
+	border: 0 px;
+}
