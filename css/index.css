@@ -17,6 +17,6 @@
 	background: rgb(72 208 207);
 }
 
-.BookingControl_control {
-	border: 0 px;
+.WidgetApp_container .BookingControl_control.BookingControl_inline {
+	border: 0px;
 }
