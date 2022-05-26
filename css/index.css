@@ -20,3 +20,15 @@
 .WidgetApp_container .BookingControl_control.BookingControl_inline {
 	border: none;
 }
+
+.Counter_button.Counter_minus {
+	background: rgb(34, 153, 152);
+}
+
+.Counter_button.Counter_plus  {
+	background: rgb(34, 153, 152);
+}
+
+.BookingAccommodationsPanel_actions span > [type="button"] {
+	background: rgb(34, 153, 152);
+}
