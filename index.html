@@ -28,6 +28,30 @@
 			}, "https://bookonline24.ru/");
 		    });
 		</script>
+		<script type="text/javascript">
+                (function(k,o,t,e,l){
+                    l = document.createElement("script");
+                    l.type = "text/javascript";
+                    l.src = "https://bookonline24.ru/widget.js";
+                    l.async = !0;
+                    l.onload = l.onreadystatechange = function() {
+                        e = this.readyState;
+                        !o && (!e || e === "complete") && (o = 1) && k();
+                    };
+                    t = document.getElementsByTagName("script")[0];
+                    t.parentNode.insertBefore(l, t);
+                })(function(){
+                    HotelWidget.init({
+                        // ID организации; ID html элемента нужно проставить ниже в поле container
+                        id: "cb949384-c37e-4aa0-9061-622f5b76e3fb",
+                        type: "verticalBlock",
+                        form: {
+                            // Замените на ID html элемента, в который нужно вставить виджет
+                            container: "otel-ant-vert",
+                        }
+                    }, "https://bookonline24.ru/");
+                });
+            </script>
 	</head>
 	<body>
 		<script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
@@ -41,7 +65,8 @@
 		</div>
 		<div id="a58a4c8f-3368-4508-ac26-168317965441">
 			<p>Отель Антон123</p>
-			
+		<div id="otel-ant-vert">
+			<p>Отель Антон123 вертикальный</p>			
 		</div>
 		<div id="rooms-list">			
 		    <p>Номера Отель Антон123</p>
