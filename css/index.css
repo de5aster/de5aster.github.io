@@ -32,3 +32,9 @@
 .BookingAccommodationsPanel_actions span > [type="button"] {
 	background: rgb(34, 153, 152);
 }
+
+@media (max-width: 767px) {
+	#baltika {
+		display:none;
+	}
+}
