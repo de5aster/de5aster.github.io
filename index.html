@@ -22,6 +22,12 @@
 		<noscript><div><img src="https://mc.yandex.ru/watch/90834919" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 		<!-- /Yandex.Metrika counter -->
 		<script type="text/javascript">
+		function onBookingEvent(comment)
+		{
+		    ym(90834919,'reachGoal','onBookingEvent');
+		    console.log(comment);
+		}
+		
                 (function(k,o,t,e,l){
                     l = document.createElement("script");
                     l.type = "text/javascript";
@@ -36,7 +42,7 @@
                 })(function(){
                     HotelWidget.init({
                         // ID организации; ID html элемента нужно проставить ниже в поле container
-                        id: "e1df14f4-73de-428f-b46a-e10b445873e7",
+                        id: "cb949384-c37e-4aa0-9061-622f5b76e3fb",
                         type: "verticalBlock",
                         form: {
                             // Замените на ID html элемента, в который нужно вставить виджет
@@ -46,7 +52,7 @@
 			    container: "rooms-list-baltika",
 			},
 			hooks: {
-			    onBooking: ym(90834919,'reachGoal','onBookingEvent')
+			    onBooking: onBookingEvent(Booking.comment)
 			}
                     }, "https://bookonline24.ru/");
                 });
