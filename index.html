@@ -21,14 +21,7 @@
 		</script>
 		<noscript><div><img src="https://mc.yandex.ru/watch/90834919" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 		<!-- /Yandex.Metrika counter -->
-		<script type="text/javascript">
-		function onBookingEvent()
-		{
-		    console.log('reachGoal');
-		    ym(90834919,'reachGoal','onBookingEvent')
-		    
-		}
-		
+		<script type="text/javascript">		
                 (function(k,o,t,e,l){
                     l = document.createElement("script");
                     l.type = "text/javascript";
@@ -53,7 +46,8 @@
 			    container: "rooms-list-baltika",
 			},
 			hooks: {
-			    onBooking: onBookingEvent()
+			    onBooking: ym(90834919,'reachGoal','onBookingEvent'),
+			    onInit: ym(90834919,'reachGoal','onInitEvent')
 			}
                     }, "https://bookonline24.ru/");
                 });
