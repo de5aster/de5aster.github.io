@@ -52,11 +52,17 @@
 			    container: "rooms-list-baltika",
 			},
 			hooks: {
-			    onBooking: onBookingEvent(booking.comment)
+			    onBooking: onBookingEvent()
 			}
                     }, "https://bookonline24.ru/");
                 });
             </script>
+		<!-- VKMiniApp -->
+		<script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
+		<script>
+		  // Sends event to client
+		  vkBridge.send('VKWebAppInit');
+		</script>
 	</head>
 	<body
 		<h1>МОБ виджет тест</h1>
