@@ -46,8 +46,8 @@
 			    container: "rooms-list-baltika",
 			},
 			hooks: {
-			    onBooking: ym(90834919,'reachGoal','onBookingEvent'),
-			    onInit: ym(90834919,'reachGoal','onInitEvent')
+			     onBooking: function() { ym(90834919, 'reachGoal', 'onBookingEvent') },
+    			     onInit: function() { ym(90834919, 'reachGoal', 'onInitEvent') }
 			}
                     }, "https://bookonline24.ru/");
                 });
