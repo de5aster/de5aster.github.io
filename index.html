@@ -21,6 +21,29 @@
 		</script>
 		<noscript><div><img src="https://mc.yandex.ru/watch/90834919" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 		<!-- /Yandex.Metrika counter -->
+		<!-- VKMiniApp -->
+		<script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
+		<script>
+		  // Sends event to client
+		  vkBridge.send('VKWebAppInit');
+		</script>
+	</head>
+	<body>
+	    <h1>МОБ виджет тест</h1>
+		<div id="a58a4c8f-3368-4508-ac26-168317965441">
+			<p>Отель Антон123</p>
+		<div id="otel-ant-vert">
+			<p>Отель Антон123 вертикальный</p>			
+		</div>
+		<div id="rooms-list">			
+		    <p>Номера Отель Антон123</p>
+		</div>
+		<div id="baltika">			
+	    	    <p>Балтика</p>
+		</div>
+		<div id="rooms-list-baltika">			
+	    	    <p>Номера Балтики</p>
+		</div>
 		<script type="text/javascript">		
                 (function(k,o,t,e,l){
                     l = document.createElement("script");
@@ -42,40 +65,16 @@
                             // Замените на ID html элемента, в который нужно вставить виджет
                             container: "baltika",
                         },
-			roomsList: {
-			    container: "rooms-list-baltika",
-			    insert: "after"
-			},
-			hooks: {
-			     onBooking: function() { ym(90834919, 'reachGoal', 'onBookingEvent') },
-    			     onInit: function() { ym(90834919, 'reachGoal', 'onInitEvent') }
-			}
-                    }, "https://bookonline24.ru/");
+				roomsList: {
+					container: "rooms-list-baltika",
+					insert: "after"
+				},
+				hooks: {
+					 onBooking: function() { ym(90834919, 'reachGoal', 'onBookingEvent') },
+						 onInit: function() { ym(90834919, 'reachGoal', 'onInitEvent') }
+				}
+						}, "https://bookonline24.ru/");
                 });
-            </script>
-		<!-- VKMiniApp -->
-		<script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
-		<script>
-		  // Sends event to client
-		  vkBridge.send('VKWebAppInit');
-		</script>
-	</head>
-	<body
-		<h1>МОБ виджет тест</h1>
-		</div>
-		<div id="a58a4c8f-3368-4508-ac26-168317965441">
-			<p>Отель Антон123</p>
-		<div id="otel-ant-vert">
-			<p>Отель Антон123 вертикальный</p>			
-		</div>
-		<div id="rooms-list">			
-		    <p>Номера Отель Антон123</p>
-		</div>
-		<div id="baltika">			
-	    	    <p>Балтика</p>
-		</div>
-		<div id="rooms-list-baltika">			
-	    	    <p>Номера Балтики</p>
-		</div>
+			</script>
 	</body>
 </html>
