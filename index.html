@@ -60,18 +60,18 @@
                         form: {
                             // Замените на ID html элемента, в который нужно вставить виджет
                             container: "baltika",
-                        },
-						roomsList: {
-							container: "rooms-list-baltika",
-							insert: "after"
-						},
-						hooks: {
-							 onBooking: function() { ym(90834919, 'reachGoal', 'onBookingEvent') },
-								 onInit: function() { ym(90834919, 'reachGoal', 'onInitEvent') }
-						}
-						}, "https://bookonline24.ru/");
-                	});
-			</script>
+                        }
+			roomsList: {
+			    container: "rooms-list-baltika",
+			    insert: "after"
+			},
+			hooks: {
+			    onBooking: function() { ym(90834919, 'reachGoal', 'onBookingEvent') },
+			    onInit: function() { ym(90834919, 'reachGoal', 'onInitEvent') }
+			}
+			}, "https://bookonline24.ru/");
+                    });
+		</script>
 		</div>
 		<div id="rooms-list-baltika">			
 	    	    <p>Номера Балтики</p>		
