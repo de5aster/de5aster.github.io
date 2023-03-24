@@ -40,27 +40,31 @@
 		</div>
 		<div id="baltika">			
 	    	    <p>Балтика</p>
-			<script type="text/javascript">		
-                (function(k,o,t,e,l){
-                    l = document.createElement("script");
-                    l.type = "text/javascript";
-                    l.src = "https://bookonline24.ru/widget.js";
-                    l.async = !0;
-                    l.onload = l.onreadystatechange = function() {
-                        e = this.readyState;
-                        !o && (!e || e === "complete") && (o = 1) && k();
-                    };
-                    t = document.getElementsByTagName("script")[0];
-                    t.parentNode.insertBefore(l, t);
-                })(function(){
-                    HotelWidget.init({
-                        // ID организации; ID html элемента нужно проставить ниже в поле container
-                        id: "e1df14f4-73de-428f-b46a-e10b445873e7",
-                        type: "verticalBlock",
-                        form: {
-                            // Замените на ID html элемента, в который нужно вставить виджет
-                            container: "baltika",
-                        },
+		</div>
+		<div id="rooms-list-baltika">			
+	    	    <p>Номера Балтики</p>		
+		</div>		
+		<script type="text/javascript">		
+		    (function(k,o,t,e,l){
+		    l = document.createElement("script");
+		    l.type = "text/javascript";
+		    l.src = "https://bookonline24.ru/widget.js";
+		    l.async = !0;
+		    l.onload = l.onreadystatechange = function() {
+			e = this.readyState;
+			!o && (!e || e === "complete") && (o = 1) && k();
+		    };
+		    t = document.getElementsByTagName("script")[0];
+		    t.parentNode.insertBefore(l, t);
+		})(function(){
+		    HotelWidget.init({
+			// ID организации; ID html элемента нужно проставить ниже в поле container
+			id: "e1df14f4-73de-428f-b46a-e10b445873e7",
+			type: "verticalBlock",
+			form: {
+			    // Замените на ID html элемента, в который нужно вставить виджет
+			    container: "baltika",
+			},
 			roomsList: {
 			    container: "rooms-list-baltika",
 			    insert: "after"
@@ -70,11 +74,7 @@
 			    onInit: function() { ym(90834919, 'reachGoal', 'onInitEvent') }
 			}
 			}, "https://bookonline24.ru/");
-                    });
+		    });
 		</script>
-		</div>
-		<div id="rooms-list-baltika">			
-	    	    <p>Номера Балтики</p>		
-		</div>		
 	</body>
 </html>
