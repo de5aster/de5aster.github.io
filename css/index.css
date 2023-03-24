@@ -40,9 +40,3 @@
 .FixedButton_button > span > [type="button"]:hover {
 	background: rgb(72, 208, 207);
 }
-
-@media (max-width: 767px) {
-	#baltika {
-		display:none;
-	}
-}
