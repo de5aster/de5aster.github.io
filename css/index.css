@@ -33,11 +33,11 @@
 	background: rgb(34, 153, 152);
 }
 
-.FixedButton_button > span > > [type="button"] {
+.FixedButton_button > span > [type="button"] {
 	background: rgb(34, 153, 152);
 }
 
-.FixedButton_button > span > > [type="button"]:hover {
+.FixedButton_button > span > [type="button"]:hover {
 	background: rgb(72, 208, 207);
 }
 
