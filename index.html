@@ -53,8 +53,10 @@
 			    insert: "after"
 			},
 			hooks: {
-			    onBooking: function() { concole.log(BookingEvent) },
-			    onInit: function() { ym(90834919, 'reachGoal', 'onInitEvent') }
+			    onBooking: (booking) => {
+				console.log("Metriks!!!");
+				console.log("Booking: ", booking);},
+			    onInit: function() { console.log("Started"}
 			}
 			}, "https://bookonline24.ru/");
 		    });
