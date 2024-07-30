@@ -29,47 +29,66 @@
 		</script>
 		<script type="text/javascript">
 		    (function(k,o,t,e,l){
-		        l = document.createElement("script");
-		        l.type = "text/javascript";
-		        l.src = "https://bookonline24.ru/widget.js";
-		        l.async = !0;
-		        l.onload = l.onreadystatechange = function() {
-		            e = this.readyState;
-		            !o && (!e || e === "complete") && (o = 1) && k();
-		        };
-		        t = document.getElementsByTagName("script")[0];
-		        t.parentNode.insertBefore(l, t);
+			l = document.createElement("script");
+			l.type = "text/javascript";
+			l.src = "https://bookonline24.ru/widget.js";
+			l.async = !0;
+			l.onload = l.onreadystatechange = function() {
+			    e = this.readyState;
+			    !o && (!e || e === "complete") && (o = 1) && k();
+			};
+			t = document.getElementsByTagName("script")[0];
+			t.parentNode.insertBefore(l, t);
 		    })(function(){
-		        HotelWidget.init({
-		            // ID организации; ID html элемента нужно проставить ниже в поле container
-		            hotelId: "e1df14f4-73de-428f-b46a-e10b445873e7",
-		            version: "2",
-		            baseUrl: "https://bookonline24.ru/",
-		            hooks: {
-			    	onBooking: (booking) => {
+			HotelWidget.init({
+			    // ID организации; ID html элемента нужно проставить ниже в поле container
+			    hotelId: "e1df14f4-73de-428f-b46a-e10b445873e7",
+			    version: "2",
+			    baseUrl: "https://bookonline24.ru/",
+			    hooks: {
+				onError: function(e) { console.error("onError", e); },
+				onInit: function() { console.log("onInit"); },
+				onBooking: (booking) => {
 					console.log("Metriks!!!");
 				        console.log("Booking: ", JSON.stringify(booking.map(el => el.id), null, 2));},
-			    	onInit: function() { console.log("Started")}
-		            }
-		        }); 
+			    }
+			}); 
 		
-		        <!-- Поиск и бронирование номеров — вертикальный блок -->
-		        HotelWidget.add({
-		            type: "verticalBlock",
-		            appearance: {
-		                // Замените на ID html элемента, в который нужно вставить виджет
-		                container: "baltika"
-		            }
-		        });
-
+			<!-- Поиск и бронирование номеров — вертикальный блок -->
+			HotelWidget.add({
+			    type: "verticalBlock",
+			    appearance: {
+				// Замените на ID html элемента, в который нужно вставить виджет
+				container: "baltika"
+			    }
+			});
+		
 			<!-- Бронирование номеров -->
-		        HotelWidget.add({
-		            type: "roomsList",
-		            appearance: {
-		                // Замените на ID html элемента, в который нужно вставить виджет
-		                container: "rooms-list-baltika"
-		            }
-		        });
+			HotelWidget.add({
+			    type: "roomsList",
+			    appearance: {
+				// Замените на ID html элемента, в который нужно вставить виджет
+				container: "rooms-list-baltika"
+			    }
+			});
+		
+			<!-- Просмотр календаря доступности — вертикальный блок -->
+			HotelWidget.add({
+			    type: "verticalAvailabilityCalendar",
+			    appearance: {
+				// Замените на ID html элемента, в который нужно вставить виджет
+				container: "WidgetVerticalAvailabilityCalendarId"
+			    }
+			});
+		
+			<!-- Просмотр календаря доступности — горизонтальный блок -->
+			HotelWidget.add({
+			    type: "horizontalAvailabilityCalendar",
+			    appearance: {
+				// Замените на ID html элемента, в который нужно вставить виджет
+				container: "baltika-calendar"
+			    }
+			});
 		    });
 		</script>
 	</head>
@@ -85,6 +104,9 @@
 		</div>
 		<div id="baltika">			
 	    	    <p>Балтика</p>
+		</div>
+		<div id="baltika-calendar">			
+	    	    <p>Балтика-календарь</p>
 		</div>
 		<div id="rooms-list-baltika">			
 	    	    <p>Номера Балтики</p>		
