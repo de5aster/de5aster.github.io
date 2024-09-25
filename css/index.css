@@ -43,6 +43,8 @@
 
 .lists {
   display: flex;
-  justify-content: center;
-  align-items: center;
+}
+
+.lists > div {
+  margin: auto;
 }
