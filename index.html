@@ -89,6 +89,15 @@
 				container: "baltika-calendar-horizontal"
 			    }
 			});
+
+			<!-- Бронирование почасовых объектов -->
+		        HotelWidget.add({
+		            type: "hourlyObjectsList",
+		            appearance: {
+		                // Замените на ID html элемента, в который нужно вставить виджет
+		                container: "hourly-list-baltika"
+		            }
+		        });
 		    });
 		</script>
 	</head>
@@ -110,6 +119,9 @@
 		</div>
 		<div id="rooms-list-baltika">			
 	    	    <p>Номера Балтики</p>		
+		</div>
+		<div id="hourly-list-baltika">			
+	    	    <p>Почаовые и всякие экскурсии Балтики</p>		
 		</div>	
 	</body>
 </html>
