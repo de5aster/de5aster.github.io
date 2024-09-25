@@ -40,3 +40,9 @@
 .FixedButton_button > span > [type="button"]:hover {
 	background: rgb(72, 208, 207);
 }
+
+.lists {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
