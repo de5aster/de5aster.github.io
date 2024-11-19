@@ -62,7 +62,14 @@
 				onInit: function() { console.log("onInit"); roistat.event.send('init')},
 				onBooking: (booking) => {
 					console.log("Metriks!!!");
-				        console.log("Booking: ", JSON.stringify(booking.map(el => el.id), null, 2));},
+				        console.log("Booking: ", JSON.stringify(booking.map(el => el.id), null, 2));
+					roistat.event.send('booking', 
+							   data: {
+								client: { 
+									name: booking.customer.fio
+								}
+							   });				
+				},
 			    }
 			}); 
 		
