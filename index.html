@@ -19,7 +19,9 @@
 			accurateTrackBounce:true
 		   });
 		</script>
-
+		<noscript><div><img src="https://mc.yandex.ru/watch/90834919" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+		<!-- /Yandex.Metrika counter -->
+		
 		<!-- Roistat Counter Start -->
 		<script>
 		(function(w, d, s, h, id) {
@@ -30,8 +32,7 @@
 		})(window, document, 'script', 'cloud.roistat.com', 'a007755ec3dfbe552c7b8674087648b0');
 		</script>
 		<!-- Roistat Counter End -->
-		<noscript><div><img src="https://mc.yandex.ru/watch/90834919" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-		<!-- /Yandex.Metrika counter -->
+
 		<!-- VKMiniApp -->
 		<script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
 		<script>
@@ -58,7 +59,7 @@
 			    baseUrl: "https://bookonline24.ru/",
 			    hooks: {
 				onError: function(e) { console.error("onError", e); },
-				onInit: function() { console.log("onInit"); roistat.event.send('init'},
+				onInit: function() { console.log("onInit"); roistat.event.send('init')},
 				onBooking: (booking) => {
 					console.log("Metriks!!!");
 				        console.log("Booking: ", JSON.stringify(booking.map(el => el.id), null, 2));},
