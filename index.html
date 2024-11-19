@@ -63,12 +63,12 @@
 				onBooking: (booking) => {
 					console.log("Metriks!!!");
 				        console.log("Booking: ", JSON.stringify(booking.map(el => el.id), null, 2));
-					roistat.event.send('booking', 
+					roistat.event.send('booking',{
 							   data: {
 								client: { 
 									name: booking.customer.fio
 								}
-							   });				
+							   }});				
 				},
 			    }
 			}); 
