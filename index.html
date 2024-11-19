@@ -70,7 +70,7 @@
 				        console.log("Booking: ", JSON.stringify(booking.map(el => el.id), null, 2));
 					var fio = booking.map(el=> el.customer.fio);
 					console.log("fio in booking : ", fio);
-					ym(90834919,'reachGoal','onBookingEvent', {customer : fio});
+					ym(90834919,'reachGoal','onBookingEvent', { "customer" : fio});
 					roistat.event.send('booking',{
 							   "data" : {
 								"client" : { 
