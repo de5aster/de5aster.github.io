@@ -58,7 +58,7 @@
 			    baseUrl: "https://bookonline24.ru/",
 			    hooks: {
 				onError: function(e) { console.error("onError", e); },
-				onInit: function() { console.log("onInit"); },
+				onInit: function() { console.log("onInit"); roistat.event.send('init'},
 				onBooking: (booking) => {
 					console.log("Metriks!!!");
 				        console.log("Booking: ", JSON.stringify(booking.map(el => el.id), null, 2));},
